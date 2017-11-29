@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>练习</title>
+</head>
+<body>
+	
+</body>
+</html>
+
+
+<!-- 日期：
+<script>
+	var date = prompt('请输入日期');
+	switch(date){
+		case '1':alert('星期一');
+		break;
+		case '2':alert('星期二');
+		break;
+		case '3':alert('星期三');
+		break;
+		case '4':alert('星期四');
+		break;
+		case '5':alert('星期五');
+		break;
+		case '6':alert('星期六');
+		break;
+		case '7':alert('星期日');
+		break;
+		default:alert('输入有误');
+	}
+</script>
+
+成绩表：
+<script>
+	var num = prompt('请输入日期');
+	if(num >= 60 && num <= 100){
+		alert('及格');
+		if(num <= 100 && num >= 80){
+			alert('优秀');
+		}
+		if(num <80 && num >=60){
+			alert('良好');
+		}
+		if(num == 60){
+			alert('及格');
+		}
+	}
+	else if(num < 60 && num > 0){
+		alert('不及格');
+		if(num < 60 && num >= 40){
+			alert('继续努力');
+		}
+	}
+	else{
+		alert('输入有误');
+	}
+</script>
+
+四则运算：
+<script>
+	var num1 = Number(prompt('请输入数字'));
+	var ope = prompt('请输入运算符');
+	var num2 = Number(prompt('请输入数字'));
+	switch(ope){
+		case('+'):document.write(num1+num2);
+		break;
+		case('-'):document.write(num1-num2);
+		break;
+		case('*'):document.write(num1*num2);
+		break;
+		case('/'):document.write(num1/num2);
+		break;
+		case('%'):document.write(num1%num2);
+		break;
+	}
+</script>
+
+100以内奇偶数：
+<script>
+	for(var i = 1; i <= 100; i++){
+		if(i % 2 == 0){
+			console.log(`这是100以内的偶数${i}`);
+		}else{
+			console.log(`这是100以内的奇数${i}`);
+		};
+	}
+</script> -->
+
+<!-- 水仙花：
+<script>
+	for(var i = 1; i < 10; i++){
+		for(var j = 0; j < 10; j++){
+			for(var k = 0; k < 10; k++){
+				if((i**3+j**3+k**3) == (i*100+j*10+k)){
+					console.log(`这是水仙花数${i*100+j*10+k}`)
+				}
+			}
+		}
+	}
+</script> -->
+
+<!-- 金字塔：
+<script>
+	for(var i = 0; i < 6; i++){
+		for(var j = 0; j < 5-i; j++){
+			document.write('&nbsp ');
+		}
+		for(var k = 0; k < i+1; k++){
+			document.write('8&nbsp ');
+		}
+		document.write('<br>');
+	}
+</script> -->
+
+<!-- 乘法表
+<script>
+ 	for(var i = 1; i < 10; i++){ 		
+ 		for(var j = 1; j <= i; j++){
+			document.write(`${i}*${j} = ${i*j} `);
+			document.write(`&nbsp `);
+ 		}
+ 		document.write(`<br>`);
+	}
+</script> -->
+
+<!-- 求人数
+<script>
+	for(var i = 100; i < 200; i++){
+		if((i % 3 == 1)&&(i % 4 == 2)&&(i % 5 == 3)){
+			console.log(`一共有${i}`);
+		}
+	}
+</script> -->
+
+<!-- 教科书
+<script>
+	for(var i = 0; i <= 100; i++){
+		for(var j = 0; j <= 100; j++){
+			for(var k = 0; k < 100; k++){
+				if((i+j+k==100)&&(i*10+j*5+k*0.5==100)){
+					console.log(`教科书${i},参考书${j},练习本${k}`)
+				}
+			}
+		}
+	}
+</script> -->
+
+<!-- 十成十表格：
+<script>
+	var tab = `<table width="500px" height="500px" border="10px" cellspacing="0">`;
+	for(var i = 0; i < 10; i++){
+		if(i % 2 == 0){
+			tab += `<tr bgcolor="red">`;
+		}else{
+			tab += `<tr bgcolor="green">`;
+		}
+		for(var j = 0; j < 10; j++){
+			tab += `<td></td>`;
+		}
+	}
+	tab += `</table>`;
+	document.write(tab);
+</script> -->
+
+<!-- 数组去空
+<script>
+	var arr = [45,5,,9,,12,51];
+	var newarr = [];
+	for(var i = 0; i < arr.length; i++){
+		if(arr[i] !== undefined){
+			newarr[newarr.length] = arr[i];
+		}
+	}
+	console.log(newarr);
+</script> -->
+
+<!-- 排列
+<script>
+	var arr = [4,5,6,9,8,2,3];
+	for(var i = 0; i < arr.length; i++){
+		for(var j = 0; j < arr.length; j++){
+			if(arr[i] > arr[j]){
+				var num = arr[i];
+				arr[i] = arr[j];
+				arr[j] = num
+			}
+		}
+	}
+	console.log(arr);
+</script> -->
+
+<!-- 最大最小值
+<script>
+	var arr = [12,54,989,63,32,2,6];
+	var sum,big,small,length;
+	big = arr[0];
+	small = arr[0];
+	sum = 0;
+	length = parseFloat(arr.length+1);
+	for(var i = 0; i < arr.length-1; i++){
+		if(big < arr[i]){
+			big = arr[i];
+		}
+		if(small > arr[i]){
+			small = arr[i];
+		}
+		sum += arr[i];
+	}
+	console.log(arr);
+	console.log(`平均值${sum/length}`);
+	console.log(`和${sum},最大值${big},最小值${small}`);
+</script> -->
+
+<!-- 筛选类型
+<script>
+	var arr = ([`5`,`12`,`3`,'g','r','t'],string);
+	for(var i = 0; i < arr.length; i++){
+		if(typeof arr[i]=);
+		console.log(arr[i])
+	}
+</script> -->
+
+<!-- 筛选大于0的数
+<script>
+	var arr = [12,-6,3,0,5,2,-9];
+	for(var i = 0; i < arr.length; i++){
+		if(arr[i] > 0){
+			console.log(arr[i]);
+		}
+	}	
+</script> -->
+
+<!-- 扩大2倍
+<script>
+	var arr=[2,3,5,6,9,8];	
+	for(var i = 0; i < arr.length; i++){
+		arr[i] = arr[i] * 2;
+	}
+	console.log(arr);
+</script> -->
+
+<!-- 反向输出
+<script>
+	var arr = [23,56,4,2,54,8,6];
+	var arr1 = [];
+	for(var i = 0; i < arr.length; i++){
+		arr1[i] = arr[arr.length-1-i];
+	}
+	console.log(arr1);
+</script> -->
+
+<!-- 数组合并
+<script>
+	var arr1 = [5,6,9,8,7,4,32,3];
+	var arr2 = [2,3,5,698,84,1];
+	for(var i = 0; i < arr1.length; i++){
+		arr2[arr2.length] = arr1[i];
+	}
+	console.log(arr2);
+</script>
+ -->
